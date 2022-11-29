@@ -41,15 +41,15 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Waste less food!  </h1>
+            <h1>Bored in the gym?  </h1>
           </div>
           <div className="header-subtitle">
-            <h2>Get recipe inspiration from whatever you have in your fridge.</h2>
-            <h2>  Type in the ingrediants you have and let Chef Anki give you a recipe. Type: Give me a recipe with (add your ingredients here) </h2>
+            <h2 className='header-highlight'>Get some fresh ideas on whatever you want to train today</h2>
+            <h2>  Type in the body part you want to train today and you will get a workout, warm up and day of food inspo with snacks!</h2>
           </div>
           <div className="prompt-container">
           <textarea 
-          placeholder="start typing here" 
+          placeholder="Please type the body part you fancy working on in the gym today." 
           className="prompt-box"
           value={userInput}
           onChange= {onUserChangedText} 
@@ -61,7 +61,7 @@ const Home = () => {
         >
           <div className='generate'>
             {isGenerating ? <span className='loader'></span> :    
-            <p> Generate</p>}
+            <p> Generate your workout</p>}
           </div>
         </a>
       </div>
@@ -69,7 +69,7 @@ const Home = () => {
         <div className='output'>
           <div className='output-header-container'>
             <div className='output-header'>
-              <h3> OUTPUT</h3>
+              <h3> YOUR WORKOUT & MEAL PLAN FOR TODAY</h3>
               </div>
               </div>
               <div className='output-content'>
